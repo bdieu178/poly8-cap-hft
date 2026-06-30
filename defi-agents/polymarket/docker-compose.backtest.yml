@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backtester:
+    build:
+      context: .
+      dockerfile: Dockerfile.backtest
+    ports:
+      - "33333:33333"
+    volumes:
+      - .:/app
+    environment:
+      - POLYGON_RPC_URL=${POLYGON_RPC_URL}
+    command: /bin/bash -c "./backtest_setup.sh && uv run jupyter lab --ip=0.0.0.0 --port=33333 --no-browser --allow-root --NotebookApp.token=''"

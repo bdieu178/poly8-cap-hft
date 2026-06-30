@@ -1,0 +1,30 @@
+# HFT Backtesting & Observability Container
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install system dependencies for Nautilus and Jupyter
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install UV for fast dependency management
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+# Copy project files
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen
+
+# Copy source code
+COPY . .
+
+# Expose JupyterLab port
+EXPOSE 33333
+
+# Setup script for backtest initialization
+RUN chmod +x backtest_setup.sh
+
+# Start JupyterLab by default
+CMD ["uv", "run", "jupyter", "lab", "--ip=0.0.0.0", "--port=33333", "--no-browser", "--allow-root", "--NotebookApp.token=''"]

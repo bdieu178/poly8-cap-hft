@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  harvester:
+    build: .
+    container_name: polymarket-harvester
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs

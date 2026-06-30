@@ -1,0 +1,70 @@
+# --- Security ---
+.env
+.env.local
+*.pem
+POLY_SECRET
+*.pub
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Rust ---
+target/
+**/*.rs.bk
+
+# --- C++ ---
+build/
+bin/
+*.o
+*.a
+*.so
+
+# --- Data & Logs ---
+**/data/realtime/*.parquet
+**/data/historical/*.parquet
+**/logs/**/*.log
+**/logs/**/*.md
+**/reports/**/*.md
+nautilus_catalog/
+*.log
+*.jsonl
+*.parquet
+
+# Ignore build artifacts and toolchains
+target/
+.rustup/
+.cache/
+bin/
+.agents/
+
+# Ignore specific large hidden folders
+.gemini/
+.antigravity-server/
+.codeoss-cloudworkstations/
+
+
+# --- System ---
+.DS_Store
+.idea/
+.vscode/
+
+# Mac OS USB / System metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+.*.swp
+.tmux/plugins/tmux
+.tmux/plugins/tmux-continuum
+.tmux/plugins/tmux-resurrect
+.tmux/plugins/tmux-sensible
+.tmux/plugins/tmux-sessionx
+.tmux/plugins/tpm

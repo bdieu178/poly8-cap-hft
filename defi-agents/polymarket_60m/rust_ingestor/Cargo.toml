@@ -1,0 +1,31 @@
+[package]
+name = "rust_ingestor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dotenvy = "0.15"
+chrono = "0.4"
+hex = "0.4"
+libc = "0.2"
+reqwest = { version = "0.11", features = ["json"] }
+futures = "0.3"
+tonic = { version = "0.11", features = ["tls", "tls-roots"] }
+prost = "0.12"
+clap = { version = "4.0", features = ["derive"] }
+
+# Local SDK for Polymarket
+polymarket_client_sdk_v2 = { path = "../../../rs-clob-client-v2", features = ["ws", "gamma", "clob"] }
+
+# Web3 / Alloy
+alloy = { git = "https://github.com/alloy-rs/alloy", branch = "main", features = ["full"] }
+
+[build-dependencies]
+tonic-build = { version = "0.11", features = ["prost"] }
+
+[dev-dependencies]
+mockito = "0.31"
+derive_builder = "0.12"

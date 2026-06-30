@@ -1,0 +1,16 @@
+aiohttp
+polars
+websockets
+numpy
+grpcio
+grpcio-tools
+nautilus_trader
+pyyaml
+python-dotenv
+matplotlib
+web3
+pyarrow
+pytest
+hyperliquid-python-sdk
+py-clob-client-v2
+networkx

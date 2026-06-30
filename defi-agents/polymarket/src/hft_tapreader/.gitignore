@@ -1,0 +1,5 @@
+build/
+tapreader
+tapreader_mock
+*.pb.cc
+*.pb.h

@@ -1,0 +1,22 @@
+[project]
+name = "polymarket-hft-pipeline"
+version = "0.1.0"
+description = "HFT Data Engineering Pipeline for Polymarket and Hyperliquid"
+requires-python = ">=3.10"
+dependencies = [
+    "web3",
+    "polars",
+    "pyarrow",
+    "nautilus_trader",
+    "hyperliquid-python-sdk",
+    "pyyaml",
+    "py-clob-client-v2",
+    "python-dotenv",
+    "aiohttp",
+    "matplotlib>=3.10.9",
+    "networkx>=3.0",
+    "websockets",
+    "numpy",
+    "grpcio",
+    "grpcio-tools",
+]

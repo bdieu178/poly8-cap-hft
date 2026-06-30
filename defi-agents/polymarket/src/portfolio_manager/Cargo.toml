@@ -1,0 +1,18 @@
+[package]
+name = "portfolio_manager"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.32", features = ["full"] }
+redis = { version = "0.24", features = ["tokio-comp", "json"] }
+duckdb = { version = "1.1", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+futures-util = "0.3"
+dotenvy = "0.15"
+alloy = { version = "=1.6.3", features = ["signers", "signer-local", "providers", "reqwest", "reqwest-rustls-tls", "rpc-types-eth", "contract"] }
+polymarket_client_sdk_v2 = { path = "../../../../rs-clob-client-v2", features = ["clob", "gamma", "tracing"] }
+reqwest = { version = "=0.12.28", features = ["json"] }
+uuid = { version = "1.8.0", features = ["serde", "v4"] }
+libc = "0.2"
