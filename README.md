@@ -1,6 +1,5 @@
 # Poly8 Capital: Polymarket & Hyperliquid HFT Arbitrage Pipeline
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux-lightgrey.svg)]()
 [![Rust: 1.75+](https://img.shields.io/badge/Rust-1.75+-orange.svg)]()
 [![C++: 20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)]()
