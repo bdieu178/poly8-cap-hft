@@ -107,6 +107,8 @@ graph TD
 
 ## 3. Directory Layout & Key Modules
 
+Note: Scripts & docs are stripped from this online repo for privacy reasons. Please reach out for info on the logic. Defi-agents folders contain Status Update & Notes to read through the progression of the project from start to finish.
+
 ```text
 ├── defi-agents/                       # Python Sentinel & Documentation Layer
 │   ├── ChangeLog.md                   # Chronological release log
@@ -143,7 +145,6 @@ graph TD
     ├── safe_complete_shutdown.sh      # Emergency stop & SHM purge script
     └── setup_ci_dependencies.sh       # Workstation bootstrap script
 ```
-
 ---
 
 ## 4. Bare-Metal Low-Latency System Tuning (Deployment Prerequisites)
